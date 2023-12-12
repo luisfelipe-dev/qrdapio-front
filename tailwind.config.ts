@@ -20,6 +20,7 @@ module.exports = {
       "white": "#fff",
       "success": "#29BF12",
       "orange-brand": "#FF9914",
+      "bg-main": '#F4F4F4'
     },
     extend: {
       keyframes: {
