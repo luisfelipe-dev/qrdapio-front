@@ -15,6 +15,10 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    colors: {
+      "cardapio-title": '#2B2D42',
+      "white": "#fff"
+    },
     extend: {
       keyframes: {
         "accordion-down": {
