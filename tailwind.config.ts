@@ -19,6 +19,7 @@ module.exports = {
       "cardapio-title": '#2B2D42',
       "white": "#fff",
       "success": "#29BF12",
+      "orange-brand": "#FF9914",
     },
     extend: {
       keyframes: {

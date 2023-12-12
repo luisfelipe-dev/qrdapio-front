@@ -7,7 +7,7 @@ type AvatarRestauranteProps = {
 
 export function AvatarRestaurante({ className }: AvatarRestauranteProps) {
   const defaultClass =
-    "w-[72px] h-[72px] rounded-full bg-slate-950 relative bg-cover bg-center";
+    "w-[56px] h-[56px] rounded-full bg-slate-950 relative bg-cover bg-center";
   const combinedClass = cn(defaultClass, className);
   return (
     <div

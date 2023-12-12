@@ -19,8 +19,8 @@ export default function Page({ params }: Props) {
     <>
       <ContainerGrid>
         <HeaderCardapio URLImage="/images/hamburguer.png" />
-        <div className="flex flex-wrap">
-          <div className="flex w-full">
+        <div className="flex flex-wrap px-2">
+          <div className="flex w-full mb-4">
             <AvatarRestaurante className="mr-4" />
 
             <div className="flex items-center">
@@ -30,7 +30,7 @@ export default function Page({ params }: Props) {
                     QRDapio Burguer
                   </p>
                   <p className="text-cardapio-title text-sm font-semibold flex items-center">
-                    <Star weight="fill" className="mr-2"/> 4.0
+                    <Star color="#FF9914" size={16} weight="fill" className="mr-2"/> 4.0
                   </p>
                 </div>
                 <p className=" w-fulltext-sm text-success font-semibold">Aberto</p>
