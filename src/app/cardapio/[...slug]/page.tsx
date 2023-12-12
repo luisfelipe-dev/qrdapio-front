@@ -24,16 +24,16 @@ export default function Page({ params }: Props) {
             <AvatarRestaurante className="mr-4" />
 
             <div className="flex items-center">
-              <span>
-                <div className="flex items-center">
-                  <p className="mr-6 font-semibold text-cardapio-title text-[24px]">
+              <span className="w-full flex items-center flex-wrap">
+                <div className="w-full flex items-center  justify-between">
+                  <p className="font-semibold text-cardapio-title text-[22px]">
                     QRDapio Burguer
                   </p>
                   <p className="text-cardapio-title text-sm font-semibold flex items-center">
                     <Star weight="fill" className="mr-2"/> 4.0
                   </p>
                 </div>
-                <p className="text-sm text-success font-semibold">Aberto</p>
+                <p className=" w-fulltext-sm text-success font-semibold">Aberto</p>
               </span>
             </div>
           </div>
