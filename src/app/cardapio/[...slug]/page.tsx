@@ -2,6 +2,7 @@ import { AvatarRestaurante } from "@/components/avatarRestaurante";
 import { ContainerGrid } from "@/components/container";
 import HeaderCardapio from "@/components/headerCardapio";
 import { Metadata } from "next";
+import { Star } from "@phosphor-icons/react/dist/ssr";
 
 type Props = {
   params: { slug: string };
@@ -25,14 +26,14 @@ export default function Page({ params }: Props) {
             <div className="flex items-center">
               <span>
                 <div className="flex items-center">
-                  <p className="mr-6 font-semibold text-cardapio-title text-[32px]">
+                  <p className="mr-6 font-semibold text-cardapio-title text-[24px]">
                     QRDapio Burguer
                   </p>
-                  <p className="text-cardapio-title text-sm font-semibold">
-                    4.0
+                  <p className="text-cardapio-title text-sm font-semibold flex items-center">
+                    <Star weight="fill" className="mr-2"/> 4.0
                   </p>
                 </div>
-                <p>Aberto</p>
+                <p className="text-sm text-success font-semibold">Aberto</p>
               </span>
             </div>
           </div>

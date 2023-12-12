@@ -17,7 +17,8 @@ module.exports = {
     },
     colors: {
       "cardapio-title": '#2B2D42',
-      "white": "#fff"
+      "white": "#fff",
+      "success": "#29BF12",
     },
     extend: {
       keyframes: {
