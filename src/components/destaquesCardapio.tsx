@@ -57,7 +57,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('/images/img.png') no-repeat center`,
+              background: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVQaoVpavsqVMiZCy-7wWiB2UtqBQWhS_jUg&usqp=CAU') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
