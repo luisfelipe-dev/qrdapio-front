@@ -11,16 +11,16 @@ const DestaquesCardapio = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 540,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -166,7 +166,6 @@ const DestaquesCardapio = () => {
             <p className="text-cardapio-title font-semibold">R$36,00</p>
           </div>
         </div>
-       
       </Slider>
 
       {/* <div className="max-w-[168px] bg-white rounded-3xl">
