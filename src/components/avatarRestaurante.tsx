@@ -7,15 +7,16 @@ type AvatarRestauranteProps = {
 
 export function AvatarRestaurante({ className }: AvatarRestauranteProps) {
   const defaultClass =
-    "w-[56px] h-[56px] rounded-full bg-slate-950 relative bg-cover bg-center";
+    "w-[71px] h-[56px] sm:w-[72px] md:w-[63px] sm:h-[56px] bg-slate-950 relative bg-cover bg-center";
   const combinedClass = cn(defaultClass, className);
   return (
     <div
       style={{
-        backgroundImage: `url('https://s2.glbimg.com/y8zQCWQhTKQTSEUy1biLt0rsXGY=/620x430/e.glbimg.com/og/ed/f/original/2021/12/01/outback.jpeg')`,
+        background: `url('https://1.bp.blogspot.com/-fcolkHbrqYU/XyJAR1FcEdI/AAAAAAABzo4/OQaHcAY6j70T3KNeXuHSmDN40hOzXgpRQCLcBGAsYHQ/s1600/mc%2Blogos%2B4.jpg') no-repeat center`,
+        backgroundSize: 'cover',
+        borderRadius: '50%'
       }}
       className={combinedClass}
     ></div>
   );
-};
-
+}
