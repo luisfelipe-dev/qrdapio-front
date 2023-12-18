@@ -11,6 +11,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import FidelidadeCardapio from "@/components/fidelidadeCardapaio";
 import DestaquesCardapio from "@/components/destaquesCardapio";
+import CategoriaCardapio from "@/components/categoriaCardapio";
 
 type Props = {
   params: { slug: string };
@@ -63,6 +64,7 @@ export default function Page({ params }: Props) {
 
         <FidelidadeCardapio />
         <DestaquesCardapio />
+        <CategoriaCardapio />
       </ContainerGrid>
       {/* <p>{params.slug}</p> */}
     </>
