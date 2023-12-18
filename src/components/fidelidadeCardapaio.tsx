@@ -9,6 +9,7 @@ const FidelidadeCardapio = () => {
     speed: 500,
     slidesToShow: 8,
     slidesToScroll: 1,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
