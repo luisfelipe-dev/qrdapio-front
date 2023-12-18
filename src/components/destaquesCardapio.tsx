@@ -37,7 +37,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('http://localhost:3000/images/img.png') no-repeat center`,
+              background: `url('/images/img.png') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
@@ -56,7 +56,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('http://localhost:3000/images/img.png') no-repeat center`,
+              background: `url('/images/img.png') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
@@ -75,7 +75,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('http://localhost:3000/images/img.png') no-repeat center`,
+              background: `url('/images/img.png') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
@@ -94,7 +94,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('http://localhost:3000/images/img.png') no-repeat center`,
+              background: `url('/images/img.png') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
@@ -113,7 +113,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('http://localhost:3000/images/img.png') no-repeat center`,
+              background: `url('/images/img.png') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
@@ -132,7 +132,7 @@ const DestaquesCardapio = () => {
           <div
             className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
             style={{
-              background: `url('http://localhost:3000/images/img.png') no-repeat center`,
+              background: `url('/images/img.png') no-repeat center`,
               backgroundSize: "cover",
             }}
           >
@@ -147,6 +147,26 @@ const DestaquesCardapio = () => {
             <p className="text-cardapio-title font-semibold">R$36,00</p>
           </div>
         </div>
+        <div className="max-w-[168px] bg-white rounded-3xl">
+          <div
+            className="max-w-[168px] h-[168px] rounded-3xl mb-6 relative"
+            style={{
+              background: `url('/images/img.png') no-repeat center`,
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="absolute -bottom-3 left-0 right-0 grid place-items-center">
+              <p className="bg-orange-brand px-[12px] py-[8px] rounded-[56px] text-xs	text-white font-bold uppercase">
+                Novidade
+              </p>
+            </div>
+          </div>
+          <div className="px-4 pb-6">
+            <p className="text-cardapio-title  text-base mb-2">Hype Burguer</p>
+            <p className="text-cardapio-title font-semibold">R$36,00</p>
+          </div>
+        </div>
+       
       </Slider>
 
       {/* <div className="max-w-[168px] bg-white rounded-3xl">
