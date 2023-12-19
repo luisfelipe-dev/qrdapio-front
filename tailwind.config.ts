@@ -23,7 +23,8 @@ module.exports = {
       "bg-main": '#F4F4F4',
       "neutral-100": '#EDF2F4',
       "neutral-500": '#8D99AE',
-      'transparent': 'transparent'
+      "transparent": 'transparent',
+      "redmain-brand": '#EF233C'
     },
     extend: {
       keyframes: {

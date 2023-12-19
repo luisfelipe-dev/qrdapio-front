@@ -29,7 +29,45 @@ function HeaderCardapio({ URLImage }: HeaderCardapioProps) {
           <DialogHeader>
             <DialogTitle>Sobre</DialogTitle>
             <DialogDescription>
-              conteudo aqui
+              <div style={{maxHeight: '550px', overflowY: 'scroll'}}>
+                <p className="tagline text-neutral-500 text-sm font-normal mb-6	">
+                  Imagine uma hamburgueria onde cada pedaço é uma obra de arte
+                  gastronômica. Os suculentos hambúrgueres são cuidadosamente
+                  preparados com carne artesanal, temperada e moldada à mão,
+                  grelhada à perfeição. Os pães, frescos e feitos
+                  artesanalmente, são macios por dentro e levemente crocantes
+                  por fora, proporcionando o complemento ideal para cada
+                  mordida.
+                </p>
+
+                <p className="tagline text-redmain-brand text-sm font-medium mb-6">
+                  #hamburguer #burguer #artesanal #feitonahora #hamburgueria
+                  #americana #delivery #gastronomia
+                </p>
+
+                <div className="bg-neutral-100 p-6 rounded-3xl">
+                  <div className="flex flex-col mb-4">
+                    <p className="text-sm text-neutral-500 font-normal">Segunda-feira</p>
+                    <p className="text-sm text-neutral-500 font-normal">00:00 às 01:00 - 11:30 às 23:59</p>
+                  </div>
+                  <div className="flex flex-col mb-4">
+                    <p className="text-sm text-neutral-500 font-normal">Terça-feira</p>
+                    <p className="text-sm text-neutral-500 font-normal">00:00 às 01:00 - 11:30 às 23:59</p>
+                  </div>
+                  <div className="flex flex-col mb-4">
+                    <p className="text-sm text-neutral-500 font-normal">Quarta-feira</p>
+                    <p className="text-sm text-neutral-500 font-normal">00:00 às 01:00 - 11:30 às 23:59</p>
+                  </div>
+                  <div className="flex flex-col mb-4">
+                    <p className="text-sm text-neutral-500 font-normal">Quinta-feira</p>
+                    <p className="text-sm text-neutral-500 font-normal">00:00 às 01:00 - 11:30 às 23:59</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-sm text-neutral-500 font-normal">Sexta-feira</p>
+                    <p className="text-sm text-neutral-500 font-normal">00:00 às 01:00 - 11:30 às 23:59</p>
+                  </div>
+                </div>
+              </div>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
