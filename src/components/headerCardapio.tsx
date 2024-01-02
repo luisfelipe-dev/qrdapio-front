@@ -29,7 +29,7 @@ function HeaderCardapio({ URLImage }: HeaderCardapioProps) {
           <DialogHeader>
             <DialogTitle>Sobre</DialogTitle>
             <DialogDescription>
-              <div style={{maxHeight: '550px', overflowY: 'scroll'}}>
+              <div style={{maxHeight: '550px', overflowY: 'scroll'}} className="hideScroll">
                 <p className="tagline text-neutral-500 text-sm font-normal mb-6	">
                   Imagine uma hamburgueria onde cada pedaço é uma obra de arte
                   gastronômica. Os suculentos hambúrgueres são cuidadosamente

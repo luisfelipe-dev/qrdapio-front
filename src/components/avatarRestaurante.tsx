@@ -12,7 +12,7 @@ export function AvatarRestaurante({ className }: AvatarRestauranteProps) {
   return (
     <div
       style={{
-        background: `url('https://1.bp.blogspot.com/-fcolkHbrqYU/XyJAR1FcEdI/AAAAAAABzo4/OQaHcAY6j70T3KNeXuHSmDN40hOzXgpRQCLcBGAsYHQ/s1600/mc%2Blogos%2B4.jpg') no-repeat center`,
+        background: `url('/images/avatar-mada.jpg') no-repeat center`,
         backgroundSize: 'cover',
         borderRadius: '50%'
       }}

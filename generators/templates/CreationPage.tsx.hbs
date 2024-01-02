@@ -1,0 +1,53 @@
+import Cookies from 'cookies';
+
+import Base from 'templates/Base';
+import store from 'store';
+import { AUTHORIZATION } from 'utils/constants';
+import { {{pascalCase entity}}Type } from 'types';
+import { get{{pascalCase entity}} } from 'services/{{entity}}';
+
+type PageProps = {
+  uuid: string;
+  {{entity}}?: {{pascalCase entity}}Type;
+};
+
+const {{pascalCase name}}Page = (props: PageProps) => {
+  return (
+    <Base menuActive="{{pagename}}/criar">
+      <div>
+        Você deve criar o formulário em /templates/{{pascalCase name}}/create{{pascalCase name}}/index.tsx
+      </div>
+    </Base>
+  );
+};
+
+export const getServerSideProps = store.getServerSideProps(async (ctx) => {
+  const {
+    req,
+    res,
+    query: { uuid },
+  } = ctx;
+  const cookies = new Cookies(req, res);
+
+  if (!cookies.get(AUTHORIZATION)) {
+    ctx.res.writeHead(302, { location: '/' });
+    ctx.res.end();
+  }
+
+  if (uuid) {
+    if (uuid !== 'criar') {
+      const {{entity}} = await get{{pascalCase entity}}(
+        ctx,
+        Array.isArray(uuid) ? uuid[0] : uuid
+      );
+      return { props: { uuid, {{entity}} } };
+    }
+  } else {
+    ctx.res.writeHead(302, { location: '/' });
+    ctx.res.end();
+  }
+
+  return { props: { uuid } };
+});
+
+export default {{pascalCase name}}Page;

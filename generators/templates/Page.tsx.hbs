@@ -1,0 +1,27 @@
+import Cookies from 'cookies';
+
+import Base from 'templates/Base';
+import store from 'store';
+import { AUTHORIZATION } from 'utils/constants';
+import {{pascalCase name}} from 'templates/{{pascalCase name}}';
+
+const {{pascalCase name}}Page = () => {
+  return (
+    <Base menuActive="{{pagename}}/lista">
+      <{{pascalCase name}} />
+    </Base>
+  );
+};
+
+export const getServerSideProps = store.getServerSideProps(async (ctx) => {
+  const { req, res } = ctx;
+  const cookies = new Cookies(req, res);
+  if (!cookies.get(AUTHORIZATION)) {
+    ctx.res.writeHead(302, { location: '/' });
+    ctx.res.end();
+  }
+
+  return {};
+});
+
+export default {{pascalCase name}}Page;

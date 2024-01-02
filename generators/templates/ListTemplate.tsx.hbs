@@ -1,0 +1,86 @@
+import React from 'react';
+import { useRouter } from 'next/router';
+
+import { toast } from 'react-toastify';
+
+import * as Style from './styles';
+
+import Table from 'components/Table';
+import AddButton from 'components/AddButton';
+import PageTitle from 'components/PageTitle';
+
+import {
+  get{{pascalCase entity}}List,
+  delete{{pascalCase entity}}
+} from 'services/{{entity}}';
+import { {{pascalCase entity}}Pagination } from 'types';
+
+export type {{pascalCase name}}Props = {};
+
+const {{pascalCase name}} = (props: {{pascalCase name}}Props) => {
+  const router = useRouter();
+
+  const [{{entity}}Pagination, set{{pascalCase entity}}Pagination] =
+    React.useState<{{pascalCase entity}}Pagination>();
+
+  const getAll = async () => {
+    try {
+      const {{entity}} = await get{{pascalCase entity}}List();
+      set{{pascalCase entity}}Pagination({{entity}});
+    } catch (e) {
+      toast.error('Erro ao buscar os dados. Tente novamente mais tarde');
+    }
+  };
+
+  const remove = async (key: string) => {
+    try {
+      await delete{{pascalCase entity}}(key);
+      getAll();
+      toast.success('Removido com sucesso!');
+    } catch (e) {
+      toast.error('Erro ao deletar, tente novamente mais tarde');
+    }
+  };
+
+  const changePage = async (pageToGo: number) => {
+    try {
+      set{{pascalCase entity}}Pagination(await get{{pascalCase entity}}List(pageToGo));
+    } catch (e) {
+      toast.error(
+        'Não foi possível buscar os dados. Tente novamente mais tarde'
+      );
+    }
+  };
+
+  React.useEffect(() => {
+    getAll();
+
+    if (router.query.status === 'success') {
+      toast.success('Salvo com sucesso!');
+      router.push('{{pagename}}');
+    }
+  }, []);
+
+  return (
+    <Style.Wrapper>
+      <PageTitle breadcrumb={['{{title}}', 'Lista']}>
+        Lista de {{title}}
+      </PageTitle>
+      <AddButton href="/{{pagename}}/criar" attribute="{{title}}" />
+      <Table
+        title="{{title}}"
+        columns={[
+          { text: '', key: '' },
+        ]}
+        paginationItems={ {{entity}}Pagination }
+        items={ {{entity}}Pagination?.content || [] }
+        changePage={changePage}
+        deleteKey="uuid"
+        deleteAction={remove}
+        editRef="/{{pagename}}/[uuid]"
+      />
+    </Style.Wrapper>
+  );
+};
+
+export default {{pascalCase name}};

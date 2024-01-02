@@ -1,0 +1,37 @@
+import api from 'services/api';
+import { {{pascalCase entity}}Pagination, {{pascalCase entity}}Type } from 'types';
+
+export const get{{pascalCase entity}}List = async (
+  page = 0,
+  size = 20
+): Promise<{{pascalCase entity}}Pagination> => {
+  const {{entity}}: {{pascalCase entity}}Pagination = (
+    await api().get(`/{{entity}}?page=${page}&size=${size}`)
+  )?.data;
+  return {{entity}};
+};
+
+export const get{{pascalCase entity}} = async (
+  ctx: any = null,
+  uuid: string
+): Promise<{{pascalCase entity}}Type> => {
+  const {{entity}}: {{pascalCase entity}}Type = (await api(ctx).get(`/{{entity}}/${uuid}`))?.data;
+  return {{entity}};
+};
+
+export const delete{{pascalCase entity}} = async (uuid: string) => {
+  await api().delete(`/{{entity}}/${uuid}`);
+};
+
+export const create{{pascalCase entity}} = async (data: any): Promise<{{pascalCase entity}}Type> => {
+  const {{entity}} = (await api().post(`/{{entity}}`, data)).data;
+  return {{entity}};
+};
+
+export const edit{{pascalCase entity}} = async (
+  uuid: string,
+  data: any
+): Promise<{{pascalCase entity}}Type> => {
+  const {{entity}} = (await api().put(`/{{entity}}/${uuid}`, data)).data;
+  return {{entity}};
+};
