@@ -79,15 +79,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                   <label
                     htmlFor="enterprise.name"
                     className={`absolute left-4 transition-all ${
-                      formik.values.enterprise.name ||
-                      document.activeElement ===
-                        document.getElementById("enterprise.name")
+                      formik.values.enterprise.name
                         ? "-top-3.5 text-xs text-neutral-500"
                         : "top-3.5 text-neutral-500"
                     }`}
                   >
                     Nome da empresa
                   </label>
+
                   {formik.touched.enterprise?.name &&
                   formik.errors.enterprise?.name ? (
                     <div>
@@ -112,15 +111,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                   <label
                     htmlFor="enterprise.cnpj"
                     className={`absolute left-4 transition-all ${
-                      formik.values.enterprise.cnpj ||
-                      document.activeElement ===
-                        document.getElementById("enterprise.cnpj")
+                      formik.values.enterprise.cnpj
                         ? "-top-3.5 text-xs text-neutral-500"
                         : "top-3.5 text-neutral-500"
                     }`}
                   >
                     CNPJ
                   </label>
+
                   {formik.touched.enterprise?.cnpj &&
                   formik.errors.enterprise?.cnpj ? (
                     <div>
@@ -144,15 +142,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                   <label
                     htmlFor="user.name"
                     className={`absolute left-4 transition-all ${
-                      formik.values.user.name ||
-                      document.activeElement ===
-                        document.getElementById("user.name")
+                      formik.values.user.name
                         ? "-top-3.5 text-xs text-neutral-500"
                         : "top-3.5 text-neutral-500"
                     }`}
                   >
                     Seu nome
                   </label>
+
                   {formik.touched.user?.name && formik.errors.user?.name ? (
                     <div>
                       <p className="text-error text-sm">
@@ -175,15 +172,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                   <label
                     htmlFor="user.email"
                     className={`absolute left-4 transition-all ${
-                      formik.values.user.email ||
-                      document.activeElement ===
-                        document.getElementById("user.email")
+                      formik.values.user.email
                         ? "-top-3.5 text-xs text-neutral-500"
                         : "top-3.5 text-neutral-500"
                     }`}
                   >
                     Seu e-mail
                   </label>
+
                   {formik.touched.user?.email && formik.errors.user?.email ? (
                     <div>
                       <p className="text-error text-sm">
@@ -208,15 +204,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                   <label
                     htmlFor="user.password"
                     className={`absolute left-4 transition-all ${
-                      formik.values.user.password ||
-                      document.activeElement ===
-                        document.getElementById("user.password")
+                      formik.values.user.password
                         ? "-top-3.5 text-xs text-neutral-500"
                         : "top-3.5 text-neutral-500"
                     }`}
                   >
                     Senha
                   </label>
+
                   {formik.touched.user?.password &&
                   formik.errors.user?.password ? (
                     <div>
@@ -242,15 +237,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                   <label
                     htmlFor="user.confirmPassword"
                     className={`absolute left-4 transition-all ${
-                      formik.values.user.confirmPassword ||
-                      document.activeElement ===
-                        document.getElementById("user.confirmPassword")
+                      formik.values.user.confirmPassword
                         ? "-top-3.5 text-xs text-neutral-500"
                         : "top-3.5 text-neutral-500"
                     }`}
                   >
                     Confirmar senha
                   </label>
+
                   {formik.touched.user?.confirmPassword &&
                   formik.errors.user?.confirmPassword ? (
                     <div>
