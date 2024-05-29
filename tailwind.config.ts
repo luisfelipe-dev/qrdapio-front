@@ -19,6 +19,7 @@ module.exports = {
       "cardapio-title": '#2B2D42',
       "white": "#fff",
       "success": "#29BF12",
+      "error": "#EF233C",	
       "orange-brand": "#FF9914",
       "bg-main": '#F4F4F4',
       "neutral-100": '#EDF2F4',

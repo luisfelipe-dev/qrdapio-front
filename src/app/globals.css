@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background: #F4F4F4;
+body {
+  background: #f4f4f4;
+  font-family: "Inter", sans-serif;	
 }
 
 .hideScroll::-webkit-scrollbar {
