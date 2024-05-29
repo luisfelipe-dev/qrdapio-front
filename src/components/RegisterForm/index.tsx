@@ -174,9 +174,20 @@ const RegisterForm = (props: RegisterFormProps) => {
                         ? "border-error"
                         : "border-neutral-500"
                     }`}
-                    placeholder="Seu e-mail"
                     {...formik.getFieldProps("user.email")}
                   />
+                  <label
+                    htmlFor="user.email"
+                    className={`absolute left-4 transition-all ${
+                      formik.values.user.email ||
+                      document.activeElement ===
+                        document.getElementById("user.email")
+                        ? "-top-3.5 text-xs text-neutral-500"
+                        : "top-3.5 text-neutral-500"
+                    }`}
+                  >
+                    Seu e-mail
+                  </label>
                   {formik.touched.user?.email && formik.errors.user?.email ? (
                     <div>
                       <p className="text-error text-sm">
