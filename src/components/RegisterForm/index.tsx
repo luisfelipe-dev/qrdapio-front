@@ -1,13 +1,9 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { useState } from "react";
 
 export type RegisterFormProps = {};
 
 const RegisterForm = (props: RegisterFormProps) => {
-  const [showPassword, setShowPassword] = useState(false);
-
   return (
     <>
       <div className="w-full max-w-md mx-auto flex flex-wrap justify-center mb-6">
